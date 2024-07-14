@@ -7,4 +7,5 @@ export type Collection = {
   total_supply?: number;
   created_date?: Date;
   collection: string;
+  identifier?:string;
 };

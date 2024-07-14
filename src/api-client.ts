@@ -34,13 +34,16 @@ export const getIndividualCollection = async (collectionName: string) => {
   return res.data;
 };
 
-export const getNFTsByCollection = async (
-  collection: string,
-  cursor?: string
-) => {
-  const url = cursor
-    ? `https://api.opensea.io/api/v2/collection/${collection}/nfts?limit=9&next=${cursor}`
-    : `https://api.opensea.io/api/v2/collection/${collection}/nfts?limit=9`;
+export const getNFTsByCollection = async (collection: string) => {
+  const url = `https://api.opensea.io/api/v2/collection/${collection}/nfts?limit=48`;
+
+  const res = await axios.request({ ...options, url });
+
+  return res.data;
+};
+
+export const getNFTData = async (address: string, identifier: string) => {
+  const url = `https://api.opensea.io/api/v2/chain/solana/contract/${address}/nfts/${identifier}`;
 
   const res = await axios.request({ ...options, url });
 

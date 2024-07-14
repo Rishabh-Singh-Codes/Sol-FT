@@ -8,6 +8,7 @@ import {
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Collection from "./pages/Collection";
+import Nft from "./pages/Nft";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           element={
             <Layout>
               <Collection />
+            </Layout>
+          }
+        />
+        <Route
+          path="/nft/:nftId"
+          element={
+            <Layout>
+              <Nft />
             </Layout>
           }
         />

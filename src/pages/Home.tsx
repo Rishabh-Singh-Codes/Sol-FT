@@ -1,6 +1,6 @@
 import LoaderCard from "../components/LoaderCard";
 import { BackgroundBeams } from "../components/ui/background-beams";
-import solana from "../../public/solanaLogo.svg";
+import solana from "/solanaLogo.svg";
 import TopCollections from "../components/TopCollections";
 import TopArtCollections from "../components/TopArtCollections";
 import TopGamingCollections from "../components/TopGamingCollections";
